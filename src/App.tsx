@@ -29,15 +29,32 @@ export default function App() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="z-10 w-full md:w-1/2 text-center md:text-left py-20 space-y-6"
           >
-            <h1 className="text-5xl font-extrabold text-gray-900">Roopamdeep Kaur</h1>
+            <h1 className="text-5xl font-extrabold text-gray-900">
+              Roopamdeep Kaur
+            </h1>
             <p className="text-lg text-gray-600">
               Full-Stack Developer | React • TypeScript • Node • Azure
             </p>
 
             <div className="flex justify-center md:justify-start space-x-6 mt-6">
-              <a href="https://linkedin.com/in/roopamdeep" target="_blank"><FaLinkedin size={26} className="hover:text-pink-500 transition-colors"/></a>
-              <a href="https://github.com/roopamdeep" target="_blank"><FaGithub size={26} className="hover:text-pink-500 transition-colors"/></a>
-              <a href="mailto:roopamdeep.concordia@gmail.com"><FaEnvelope size={26} className="hover:text-pink-500 transition-colors"/></a>
+              <a href="https://linkedin.com/in/roopamdeep" target="_blank">
+                <FaLinkedin
+                  size={26}
+                  className="hover:text-pink-500 transition-colors"
+                />
+              </a>
+              <a href="https://github.com/roopamdeep" target="_blank">
+                <FaGithub
+                  size={26}
+                  className="hover:text-pink-500 transition-colors"
+                />
+              </a>
+              <a href="mailto:roopamdeep.concordia@gmail.com">
+                <FaEnvelope
+                  size={26}
+                  className="hover:text-pink-500 transition-colors"
+                />
+              </a>
             </div>
           </MotionDiv>
 
