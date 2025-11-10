@@ -50,7 +50,7 @@ export default function App() {
           >
             <div className="absolute right-0 h-full w-[150%] bg-pink-100 rounded-l-[50%]" />
             <img
-              src="/src/assets/profile.jpeg"
+              src="/profile.jpeg"
               alt="Roopamdeep Kaur"
               className="relative w-64 h-64 md:w-[360px] md:h-[360px] object-cover rounded-full shadow-xl border-[6px] border-white md:mr-10"
             />
