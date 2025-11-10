@@ -1,75 +1,77 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Navbar from "./components/NavBar";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const MotionDiv = motion.div as any;
+
 export default function App() {
   return (
-    <>
-      {" "}
+    <div className="min-h-screen bg-white flex flex-col relative overflow-x-hidden scroll-smooth">
       <Navbar />
-      <div className="h-screen w-full flex justify-center items-center bg-gradient-to-br from-white via-pink-50 to-rose-100">
-        <MotionDiv
-          className="absolute w-72 h-72 bg-rose-300/30 rounded-full blur-3xl"
-          animate={{ x: [0, 80, -80, 0], y: [0, 50, -50, 0] }}
-          transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
-        ></MotionDiv>
-        <div className="flex flex-col items-center text-center space-y-3">
+
+      {/* ---------- HOME SECTION ---------- */}
+      <section
+        id="home"
+        className="min-h-screen w-[97%] bg-pink-300 flex justify-center items-center rounded-[20px] relative overflow-hidden mx-auto shadow-md mb-20"
+      >
+        <h2 className="absolute top-6 left-10 text-white text-3xl font-[Pacifico] tracking-wide">
+          Roopam
+        </h2>
+
+        <div className="relative bg-white w-11/12 md:w-[90%] lg:w-[96%] min-h-[600px] rounded-3xl shadow-2xl flex flex-col md:flex-row items-center justify-between px-10 md:px-20 overflow-hidden">
+          {/* -------- Left: Text -------- */}
           <MotionDiv
-            className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-blue-500/40 shadow-lg shadow-blue-500/20 mb-4 animate-pulse"
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="z-10 w-full md:w-1/2 text-center md:text-left py-20 space-y-6"
           >
+            <h1 className="text-5xl font-extrabold text-gray-900">Roopamdeep Kaur</h1>
+            <p className="text-lg text-gray-600">
+              Full-Stack Developer | React • TypeScript • Node • Azure
+            </p>
+
+            <div className="flex justify-center md:justify-start space-x-6 mt-6">
+              <a href="https://linkedin.com/in/roopamdeep" target="_blank"><FaLinkedin size={26} className="hover:text-pink-500 transition-colors"/></a>
+              <a href="https://github.com/roopamdeep" target="_blank"><FaGithub size={26} className="hover:text-pink-500 transition-colors"/></a>
+              <a href="mailto:roopamdeep.concordia@gmail.com"><FaEnvelope size={26} className="hover:text-pink-500 transition-colors"/></a>
+            </div>
+          </MotionDiv>
+
+          {/* -------- Right: Photo -------- */}
+          <MotionDiv
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+            className="relative w-full md:w-1/2 flex justify-center md:justify-end items-center"
+          >
+            <div className="absolute right-0 h-full w-[150%] bg-pink-100 rounded-l-[50%]" />
             <img
               src="/src/assets/profile.jpeg"
               alt="Roopamdeep Kaur"
-              className="w-36 h-36 rounded-full object-cover shadow-lg border-4 border-white"
+              className="relative w-64 h-64 md:w-[360px] md:h-[360px] object-cover rounded-full shadow-xl border-[6px] border-white md:mr-10"
             />
           </MotionDiv>
-
-          <MotionDiv
-            className="text-5xl md:text-6xl font-extrabold mb-2 z-10 text-gray-800"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Roopamdeep Kaur
-          </MotionDiv>
-          <MotionDiv
-            className="text-lg md:text-xl text-gray-600 z-10"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 1 }}
-          >
-            Full-Stack Developer | React • Node • Azure
-          </MotionDiv>
-          <MotionDiv
-            className="flex space-x-6 text-3xl text-gray-600 mt-4 z-10"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 1 }}
-          >
-            <a
-              href="https://github.com/roopamdeep"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="hover:text-black transition-colors duration-300" />
-            </a>
-            <a
-              href="https://linkedin.com/in/roopamdeep/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="hover:text-blue-600 transition-colors duration-300" />
-            </a>
-            <a href="mailto:roopamdeep.concordia@gmail.com">
-              <FaEnvelope className="hover:text-red-500 transition-colors duration-300" />
-            </a>
-          </MotionDiv>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* ---------- ABOUT SECTION ---------- */}
+      <section id="about" className="pt-20 pb-20">
+        <About />
+      </section>
+
+      {/* ---------- PROJECTS SECTION ---------- */}
+      <section id="projects" className="pt-20 pb-20">
+        <Projects />
+      </section>
+
+      {/* ---------- CONTACT SECTION ---------- */}
+      <section id="contact" className="pt-20 pb-40">
+        <Contact />
+      </section>
+    </div>
   );
 }
