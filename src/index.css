@@ -1,20 +1,50 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* -----------------------------
+   GLOBAL BEHAVIOR & SCROLLING
+-------------------------------- */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* balanced default for desktop/laptop */
+  transition: scroll-padding-top 0.3s ease;
 }
-html, body {
+
+/* Dynamic scroll padding based on screen size */
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 65px; /* tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 60px; /* large phones */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 55px; /* small mobile screens */
+  }
+}
+
+html,
+body {
   height: 100%;
-  overflow-y: auto !important;  /* ✅ enables page scroll */
+  overflow-y: auto !important; /* ✅ ensures smooth scroll for all pages */
   overflow-x: hidden;
 }
+
 #root {
   height: auto !important;
   min-height: 100vh;
 }
+
+/* -----------------------------
+   PROFILE SECTION
+-------------------------------- */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -22,26 +52,38 @@ html, body {
   text-align: center;
   padding: 20px;
 }
+
 .profile-image {
   width: 80%;
   max-width: 280px;
   border-radius: 50%;
 }
+
+/* -----------------------------
+   RESPONSIVE TYPOGRAPHY
+-------------------------------- */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8rem;
   }
+
   .social-icons {
     gap: 10px;
   }
+
   .about-text {
     font-size: 0.95rem;
   }
 }
+
+/* -----------------------------
+   NAVBAR BEHAVIOR (mobile)
+-------------------------------- */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
   .hamburger {
     display: block;
   }

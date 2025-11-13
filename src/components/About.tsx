@@ -50,7 +50,7 @@ export default function About() {
       </div>
 
       <a
-        href="/Roopamdeep_Kaur_Resume_.pdf"
+        href="\Roopamdeep_Kaur_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-10 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
