@@ -16,7 +16,6 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%]">
 
-        {/* Project 1: Vault */}
         <MotionDiv
           whileHover={{ scale: 1.05 }}
           className="bg-pink-100 rounded-2xl shadow-md p-6 flex flex-col justify-between"
@@ -50,7 +49,6 @@ export default function Projects() {
           </div>
         </MotionDiv>
 
-        {/* Project 2: StackMatch */}
         <MotionDiv
           whileHover={{ scale: 1.05 }}
           className="bg-pink-100 rounded-2xl shadow-md p-6 flex flex-col justify-between"
@@ -61,7 +59,7 @@ export default function Projects() {
               Full-stack AI hiring platform matching developers to jobs based on{" "}
               <span className="font-semibold">tech stack alignment</span>. Features
               JWT auth, AI-powered resume scoring, AWS S3 storage, and real-time
-              email notifications via Resend.
+              email notifications.
             </p>
           </div>
           <div className="flex gap-4 mt-4">
@@ -84,7 +82,6 @@ export default function Projects() {
           </div>
         </MotionDiv>
 
-        {/* Project 3: TenantTrack */}
         <MotionDiv
           whileHover={{ scale: 1.05 }}
           className="bg-pink-100 rounded-2xl shadow-md p-6 flex flex-col justify-between"
@@ -94,8 +91,8 @@ export default function Projects() {
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               Multi-role property management platform where{" "}
               <span className="font-semibold">landlords manage properties</span> and
-              tenants submit maintenance requests. Features AWS S3 lease uploads,
-              email notifications, Redux state management, and JWT auth.
+              tenants submit maintenance requests with AWS S3 lease uploads and
+              email notifications.
             </p>
           </div>
           <div className="flex gap-4 mt-4">
