@@ -112,7 +112,7 @@ export default function Projects() {
               GitHub →
             </a>
             <a
-              href="https://tenant-track-nine.vercel.app/login"
+              href="https://tenant-track-nine.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-600 font-medium hover:underline"
