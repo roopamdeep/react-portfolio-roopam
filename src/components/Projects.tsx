@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <MotionDiv
       id="projects"
-      className="scroll-mt-32 mt-32 min-h-screen w-[97%] bg-pink-100 rounded-[20px] mx-auto flex flex-col items-center justify-center text-center shadow-md"
+      className="scroll-mt-32 mt-32 min-h-screen w-[97%] bg-pink-100 rounded-[20px] mx-auto"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -15,108 +15,109 @@ export default function Projects() {
       <h2 className="text-3xl font-bold mb-8 text-gray-800">Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%]">
-        {/* ---------- Project 1: GitHub Issue Tracker ---------- */}
+
+        {/* Project 1: Vault */}
         <MotionDiv
           whileHover={{ scale: 1.05 }}
           className="bg-pink-100 rounded-2xl shadow-md p-6 flex flex-col justify-between"
         >
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-700">
-              GitHub Issue Tracker
-            </h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-700">Vault</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              A lightweight issue tracker built with{" "}
-              <span className="font-semibold">React + TypeScript</span>. It
-              allows users to create, edit, assign, and filter issues in
-              real-time. Demonstrates reusable components, form validation, and
-              API integration with a clean GitHub-inspired UI.
+              AI-powered personal finance platform with{" "}
+              <span className="font-semibold">Plaid bank connectivity</span>, Python
+              microservice for anomaly detection, budget forecasting, and OpenAI
+              natural language spending insights.
             </p>
           </div>
-
           <div className="flex gap-4 mt-4">
-            <a
-              href="https://github.com/roopamdeep/github-issue-tracker"
+            
+              href="https://github.com/roopamdeep/vault"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-600 font-medium hover:underline"
             >
               GitHub →
             </a>
-            <a href="#" className="text-pink-600 font-medium hover:underline">
+            
+              href="https://vault-drab-eight.vercel.app/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 font-medium hover:underline"
+            >
               Live Demo →
             </a>
           </div>
         </MotionDiv>
 
-        {/* ---------- Project 2: GameHub ---------- */}
+        {/* Project 2: StackMatch */}
         <MotionDiv
           whileHover={{ scale: 1.05 }}
           className="bg-pink-100 rounded-2xl shadow-md p-6 flex flex-col justify-between"
         >
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-700">
-              GameHub
-            </h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-700">StackMatch</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              A dynamic gaming discovery platform built with{" "}
-              <span className="font-semibold">React + TypeScript</span>.
-              Features modern UI design, responsive layout, and real-time API
-              integration to browse and filter games by genre, rating, and
-              platform.
+              Full-stack AI hiring platform matching developers to jobs based on{" "}
+              <span className="font-semibold">tech stack alignment</span>. Features
+              JWT auth, AI-powered resume scoring, AWS S3 storage, and real-time
+              email notifications via Resend.
             </p>
           </div>
-
           <div className="flex gap-4 mt-4">
-            <a
-              href="https://github.com/roopamdeep/gamehub"
+            
+              href="https://github.com/roopamdeep/stackmatch"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-600 font-medium hover:underline"
             >
               GitHub →
             </a>
-            <a href="#" className="text-pink-600 font-medium hover:underline">
+            
+              href="https://stackmatch-rose.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 font-medium hover:underline"
+            >
               Live Demo →
             </a>
           </div>
         </MotionDiv>
-        {/* ---------- Project 3: Vidly Movie App ---------- */}
+
+        {/* Project 3: TenantTrack */}
         <MotionDiv
           whileHover={{ scale: 1.05 }}
           className="bg-pink-100 rounded-2xl shadow-md p-6 flex flex-col justify-between"
         >
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-700">
-              Vidly Movie App
-            </h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-700">TenantTrack</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              A full-stack movie rental application built with{" "}
-              <span className="font-semibold">
-                Node.js, Express, and MongoDB
-              </span>
-              (backend) and a React front-end. Implements{" "}
-              <span className="font-semibold">
-                JWT authentication, role-based access control, and unit testing
-                with Jest.
-              </span>
-              This project demonstrates advanced backend architecture, error
-              handling with Winston, and secure deployment workflow.
+              Multi-role property management platform where{" "}
+              <span className="font-semibold">landlords manage properties</span> and
+              tenants submit maintenance requests. Features AWS S3 lease uploads,
+              email notifications, Redux state management, and JWT auth.
             </p>
           </div>
           <div className="flex gap-4 mt-4">
-            <a
-              href="https://github.com/roopamdeep/vidly"
+            
+              href="https://github.com/roopamdeep/tenant-track"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-600 font-medium hover:underline"
             >
               GitHub →
             </a>
-            <a href="#" className="text-pink-600 font-medium hover:underline">
+            
+              href="https://tenant-track.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 font-medium hover:underline"
+            >
               Live Demo →
             </a>
           </div>
         </MotionDiv>
+
       </div>
     </MotionDiv>
   );
